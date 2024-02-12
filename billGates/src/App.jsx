@@ -1,17 +1,23 @@
-import React, { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
-import Money from './components/Money'
-import Product from './components/Product'
+import Receipt from './components/Receipts'
+import TotalWorth from './components/TotalWorth'
+import { useState, createContext } from 'react'
+import PageContent from './components/PageContent'
+
+export const AppContext = createContext(null);
 
 function App() {
-  const [totalMoney,setTotalMoney] = useState(100000000000)
+
+  const [totalWorth, setTotalWorth] = useState(100000000000);
+
   return (
-    <>
-    <Header/>
-    <Money totalMoney = {totalMoney}/>
-    <Product/>
-    </>
+    <AppContext.Provider value={{totalWorth, setTotalWorth}}>
+    <Header />
+    <TotalWorth />
+    <PageContent/>
+    <Receipt />
+    </AppContext.Provider>
   )
 }
 
