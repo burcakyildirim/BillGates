@@ -1,19 +1,16 @@
-import bigmac from "https://neal.fun/spend/images/big-mac.jpg"
-import flipflop from "https://neal.fun/spend/images/flip-flops.jpg"
-
 const items = [
     {
         id: "1",
         title: "Big Mac",
         price: 2,
-        image: bigmac,
+        image: "https://neal.fun/spend/images/big-mac.jpg",
         count: 0
     },
     {
         id: "2",
         title: "Flip Flops",
         price: 3,
-        image: flipflop,
+        image: "https://neal.fun/spend/images/flip-flops.jpg",
         count: 0
     },
     {
